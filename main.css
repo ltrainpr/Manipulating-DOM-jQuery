@@ -1,0 +1,20 @@
+.clearfix:after {
+  content: " ";
+  /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+
+#content {
+  position: fixed; }
+  #content .heading {
+    width: 100%;
+    background-color: black;
+    text-align: center; }
+    #content .heading h1 {
+      color: white;
+      margin: 0; }
+  #content .description h2 {
+    color: white;
+    font-family: fantasy; }
