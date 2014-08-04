@@ -12,10 +12,10 @@
   .heading {
     width: 100%;
     background-color: black;
-    text-align: center;
+    color: white;
 
     h1{
-      color: white;
+      text-align: center;
       margin: 0;
     }
   }
@@ -27,6 +27,17 @@
       font-family: fantasy;
     }
   }
+}
+
+#menu, #about {
+  position: absolute;
+  float: left;
+  color: white;
+  font-size: 2em;
+}
+
+#about {
+  left: 100px;
 }
 
 .paella-picture {

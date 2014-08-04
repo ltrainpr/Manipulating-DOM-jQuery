@@ -13,8 +13,12 @@ $(document).ready(function () {
   var header = contentDiv.appendChild(elem);
   elem = myCreateElement('div', '', 'heading', '');
   var headingWrapper = header.appendChild(elem);
-  elem = myCreateElement('h1', '', '', 'TAPAS AND PAELLA.  TRY TO RESIST THIS!');
-  var heading = headingWrapper.appendChild(elem);
+  elem = myCreateElement('span', 'menu', '', 'Menu');
+  headingWrapper.appendChild(elem);
+  elem = myCreateElement('span', 'about', '', 'About');
+  headingWrapper.appendChild(elem);
+  elem = myCreateElement('h1', '', 'slogan', 'TAPAS AND PAELLA.  TRY TO RESIST THIS!');
+  headingWrapper.appendChild(elem);
 
   elem = myCreateElement('section', '', '', '');
   var section = contentDiv.insertBefore(elem, header.nextSibling);
