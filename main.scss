@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .clearfix:after {
    content: " "; /* Older browser do not support empty content */
    visibility: hidden;
@@ -41,7 +45,7 @@
   }
 }
 
-#menu, #about {
+#menu, #about, #home {
   position: absolute;
   float: left;
   color: white;
@@ -53,8 +57,16 @@
   background-color: grey;
 }
 
+#menu {
+  left: 85px;
+}
+
 #about {
-  left: 100px;
+  left: 166px;
+}
+
+label[for=message]{
+  vertical-align: top;
 }
 
 section {
