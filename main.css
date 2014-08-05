@@ -7,14 +7,22 @@
   clear: both; }
 
 #content {
-  position: fixed; }
+  color: white;
+  width: 100%;
+  position: absolute; }
   #content .heading {
-    width: 100%;
+    position: fixed;
     background-color: black;
-    color: white; }
+    width: 100%;
+    z-index: 100; }
     #content .heading h1 {
       text-align: center;
       margin: 0; }
+  #content section {
+    position: relative;
+    top: 37px; }
+  #content .black-background {
+    background-color: black; }
   #content .description h2 {
     color: white;
     font-family: fantasy; }
@@ -25,8 +33,14 @@
   color: white;
   font-size: 2em; }
 
+#menu:hover, #about:hover {
+  background-color: grey; }
+
 #about {
   left: 100px; }
+
+section .business-hours h2, section .traditional-sampler h1 {
+  margin-top: 0px; }
 
 .paella-picture {
   width: 100%; }
