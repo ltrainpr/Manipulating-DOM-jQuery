@@ -1,6 +1,9 @@
 body {
   margin: 0; }
 
+header {
+  height: 32px; }
+
 .clearfix:after {
   content: " ";
   /* Older browser do not support empty content */
@@ -23,7 +26,7 @@ body {
       margin: 0; }
   #content section {
     position: relative;
-    top: 37px; }
+    padding-top: 20px; }
   #content .black-background {
     background-color: black; }
   #content .description h2 {
@@ -53,3 +56,5 @@ section .business-hours h2, section .traditional-sampler h1 {
 
 .paella-picture {
   width: 100%; }
+
+/*# sourceMappingURL=main.css.map */

@@ -29,8 +29,8 @@ function homeTab () {
   $('.black-background').removeClass('black-background').html('<div class="description"><h2>Featuring a full menu of authentic traditional Spanish cuisine and tapas. Our customers can experience an extremely wide variety of dishes with memorable tastes.</h2></div>');
 }
 
-function myCreateElement (element, attributes, html) {
-  var elem = document.createElement(element);
+function constructElement (tag, attributes, html) {
+  var elem = document.createElement(tag);
   for (var key in attributes){
     elem.setAttribute(key, attributes[key]);
   }
@@ -39,29 +39,25 @@ function myCreateElement (element, attributes, html) {
   return elem;
 }
 
-function myAppendChild (parent, child){
-  return parent.appendChild(child);
-}
-
 indexPage = {
 
   createElements: function (contentDiv) {
-    var header = myAppendChild(contentDiv, myCreateElement('header', {'class': 'clearfix'}, null));
-    var headingWrapper = myAppendChild(header, myCreateElement('div', {'class': 'heading'}, null));
-    myAppendChild(headingWrapper, myCreateElement('span', {'id': 'home', 'class': 'tabs'}, 'Home'));
-    myAppendChild(headingWrapper, myCreateElement('span', {'id': 'menu', 'class': 'tabs'}, 'Menu'));
-    myAppendChild(headingWrapper, myCreateElement('span', {'id': 'about', 'class': 'tabs'}, 'About'));
-    myAppendChild(headingWrapper,myCreateElement('h1', {'class': 'slogan'}, 'TAPAS AND PAELLA.  TRY TO RESIST THIS!'));
+    var header = contentDiv.appendChild(constructElement('header', {'class': 'clearfix'}, null));
+    var headingWrapper = header.appendChild(constructElement('div', {'class': 'heading'}, null));
+    headingWrapper.appendChild(constructElement('span', {'id': 'home', 'class': 'tabs'}, 'Home'));
+    headingWrapper.appendChild(constructElement('span', {'id': 'menu', 'class': 'tabs'}, 'Menu'));
+    headingWrapper.appendChild(constructElement('span', {'id': 'about', 'class': 'tabs'}, 'About'));
+    headingWrapper.appendChild(constructElement('h1', {'class': 'slogan'}, 'TAPAS AND PAELLA.  TRY TO RESIST THIS!'));
 
-    var section = myAppendChild(contentDiv, myCreateElement('section', {}, null));
+    var section = contentDiv.appendChild(constructElement('section', {}, null));
 
-    var descriptionWrapper =  myAppendChild(section, myCreateElement('div', {'class': 'description'}, null));
-    myAppendChild(descriptionWrapper, myCreateElement('h2', {}, 'Featuring a full menu of authentic traditional Spanish cuisine and tapas. Our customers can experience an extremely wide variety of dishes with memorable tastes.'));
+    var descriptionWrapper =  section.appendChild(constructElement('div', {'class': 'description'}, null));
+    descriptionWrapper.appendChild(constructElement('h2', {}, 'Featuring a full menu of authentic traditional Spanish cuisine and tapas. Our customers can experience an extremely wide variety of dishes with memorable tastes.'));
   },
 
   setBackgroundImage: function (url) {
     var body = document.getElementsByTagName('body')[0];
-    myAppendChild(body, myCreateElement('img', {'src': url, 'alt': 'Spanish Paella', 'class': 'paella-picture'}, null));
+    body.appendChild(constructElement('img', {'src': url, 'alt': 'Spanish Paella', 'class': 'paella-picture'}, null));
   }
 };
 

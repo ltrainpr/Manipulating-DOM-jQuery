@@ -2,6 +2,10 @@ body {
   margin: 0;
 }
 
+header {
+  height: 32px;
+}
+
 .clearfix:after {
    content: " "; /* Older browser do not support empty content */
    visibility: hidden;
@@ -29,7 +33,7 @@ body {
 
   section {
     position: relative;
-    top: 37px;
+    padding-top: 20px;
   }
 
   .black-background {
