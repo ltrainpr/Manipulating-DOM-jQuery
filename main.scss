@@ -6,6 +6,10 @@ header {
   height: 32px;
 }
 
+.hide {
+  display: none;
+}
+
 .clearfix:after {
    content: " "; /* Older browser do not support empty content */
    visibility: hidden;
@@ -18,6 +22,9 @@ header {
   color: white;
   width: 100%;
   position: absolute;
+  background: url(http://seasoned.com/sites/default/files/paella.jpg) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100%;
 
   .heading {
     position: fixed;
@@ -33,10 +40,15 @@ header {
 
   section {
     position: relative;
-    padding-top: 20px;
   }
 
-  .black-background {
+  .active {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #menu, #about-us {
     background-color: black;
   }
 
@@ -49,7 +61,7 @@ header {
   }
 }
 
-#menu, #about, #home {
+#menu-nav-tab, #about-nav-tab, #home-nav-tab {
   position: absolute;
   float: left;
   color: white;
@@ -57,15 +69,15 @@ header {
 
 }
 
-#menu:hover, #about:hover {
+#menu-nav-tab:hover, #about-nav-tab:hover {
   background-color: grey;
 }
 
-#menu {
+#menu-nav-tab {
   left: 85px;
 }
 
-#about {
+#about-nav-tab {
   left: 166px;
 }
 
@@ -79,8 +91,6 @@ section {
     margin-top: 0px;
   }
 }
-
-
 
 .paella-picture {
   width: 100%;
