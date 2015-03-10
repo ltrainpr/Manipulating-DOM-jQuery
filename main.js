@@ -26,5 +26,5 @@ function homeTab () {
 }
 
 $(document).ready(function () {
-  $('.tabs').on('click', changeTabHandler});
+  $('.tabs').on('click', changeTabHandler);
 });
