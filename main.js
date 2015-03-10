@@ -1,4 +1,4 @@
-function tabs (e) {
+function changeTabHandler (e) {
   var id = e.target.id.toLowerCase();
   $('.active').removeClass('active');
   switch (id){
@@ -26,5 +26,5 @@ function homeTab () {
 }
 
 $(document).ready(function () {
-  $('.tabs').on('click', function(e){tabs(e);});
+  $('.tabs').on('click', changeTabHandler});
 });
